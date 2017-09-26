@@ -78,6 +78,11 @@ public class GoogleAnalytics {
 		for (GoogleAnalyticsParameter key : requestParms.keySet()) {
 			postParms.add(key.getParameterName(), requestParms.get(key));
 		}
+		
+		Map<String, String> customDimensions = request.getCustomDimensions();
+		for(String key : customDimensions.keySet()) {
+			postParms.add(key, customDimensions.get(key));
+		}
 	}
 
 	@SuppressWarnings("rawtypes")

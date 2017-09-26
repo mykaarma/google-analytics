@@ -1,6 +1,6 @@
 package com.mykaarma.googleanalytics;
 
-public class EventHit extends GoogleAnalyticsRequest<PageViewHit>{
+public class EventHit extends GoogleAnalyticsRequest<EventHit>{
 
 	public EventHit (String eventCategory, String eventAction) {
 		this(eventCategory, eventAction, null, null);
